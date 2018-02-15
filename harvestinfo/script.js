@@ -2,7 +2,7 @@
 var nem = require("nem-sdk").default;
 
 // Create an NIS endpoint object
-var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultMainnet, nem.model.nodes.defaultPort);
+var endpoint = nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
 
 // Set start date of the monitor
 var startDate = new Date();
