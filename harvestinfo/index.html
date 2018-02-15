@@ -6,37 +6,34 @@
 <body>
 
 	<div class="jumbotron text-center">
-	  <h1>HarvestInfo</h1>
+	  <h1>Monitor</h1>
 	</div>
 
-	<div id="transfer" style="width: 850px;margin: auto;border: 1px solid #444;padding: 20px;overflow: auto;">
-		<div class="col-md-12">
-			<div class="form-group">
-				<fieldset>
-					<label>Account address</label>
-					<input class="form-control" type="text" id="address"/>
-				</fieldset>
-			</div>
-			<!-- <div class="form-group">
-				<fieldset>
-					<label>Node IP</label>
-					<input  class="form-control" type="text" id="nodeip"/>
-				</fieldset>
-			</div> -->
-			<div class="form-group">
-				<fieldset>
-					<button class="btn btn-success" style="width:100%;" id="send">Send</button>
-				</fieldset>
-			</div>
-		</div>
-		
+	<div id="stream" style="width: 850px;height: 350px;margin: auto;border: 1px solid #444;padding: 20px;overflow: auto;"></div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Transactions in block <span id="txsHeight"></span></h4>
+	      </div>
+	      <div id="txs" class="modal-body">
+	        
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
 	</div>
 
 </body>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://raw.githubusercontent.com/QuantumMechanics/NEM-sdk/master/dist/nem-sdk.js"></script>
+<script src="../../../dist/nem-sdk.js"></script>
 <script src="script.js"></script>
 
 </html>
